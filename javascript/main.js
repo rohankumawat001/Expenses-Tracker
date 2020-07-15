@@ -6,6 +6,7 @@ const list_item = document.querySelectorAll('#list li')
 const form = document.getElementById('form');
 const text = document.getElementById('text');
 const amount = document.getElementById('amount');
+const delete_btn = document.querySelector(".delete-btn");
 
 var today = new Date();
 var dd = today.getDate()
@@ -155,7 +156,8 @@ form.addEventListener('submit',addTransaction);
                                     // ?   dark mode
                                    
 
-let darkMode = localStorage.getItem('darkMode');
+let darkMode = localStorage.getItem('darkMode')
+
 
 const darkModeToggle = document.getElementById("dark-mode-toggle");
 let slider = document.getElementsByClassName('slider');
@@ -192,6 +194,12 @@ darkModeToggle.addEventListener("click",()=>{
     }
 });
 
+
+list_item.addEventListener("touchstart", function() {
+delete_btn.style.opacity="1"
+delete_btn.style.left="0%"
+
+}, true);
 
 
 
