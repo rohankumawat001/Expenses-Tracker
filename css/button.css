@@ -81,8 +81,9 @@
 
 @media only screen and (max-width: 600px){
     .switch-wrapper{
-        right: 3%;
+        right: -5rem;
         top: 2%;
+        
     }
     .slider{
         width: 4rem;
@@ -93,8 +94,8 @@
         height: 2rem;
     }
     .moon-img{
-        padding-top: .4rem;
-     width: 1.3rem;   
+        padding-top: .2rem;
+     width: 1.5rem;   
     }
     .sun-img{
         width: 1.5rem;
