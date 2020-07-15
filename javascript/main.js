@@ -199,8 +199,8 @@ const list_length = list_item.length;
 
 for (let i=0; i<list_length; i++){
 
-list_item[i].addEventListener("click", function() {
-    alert("sj")
+list_item[i].addEventListener("touchstart", function() {
+
 delete_btn.style.opacity="1"
 delete_btn.style.left="0%"
 
