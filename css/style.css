@@ -58,7 +58,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+
 }
 
 h3{
@@ -194,12 +194,14 @@ input[type=number] {
     cursor: pointer;
     box-shadow: 4px 4px 2rem rgba(0,0,0,50%);
     transition: all .3s ease;
+    -webkit-tap-highlight-color: transparent;
 }
 .btn:focus,
 .delete-btn:focus{
     outline: 0;
     box-shadow: 2px 2px 1rem rgba(0,0,0,50%);
     transform: scaleX(.95);
+    -webkit-tap-highlight-color: transparent;
 }
 .list{
     list-style-type: none;

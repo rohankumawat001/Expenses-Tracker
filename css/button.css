@@ -22,7 +22,7 @@
      height: 3rem;
      width: 7rem;
      border-radius: 2rem;
-     background-image:linear-gradient(30deg,#817fff, #ff9100);
+     background-image:linear-gradient(30deg,#FAA17A,#FFC170);
      transition:  background .4s;
 
 }
@@ -32,7 +32,7 @@
     position: absolute;
     top: 0;
     left: 0%;
-
+    z-index: 10;
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
@@ -41,6 +41,39 @@
     transition: transform .4s;
     filter: blur(.5px);
     transition: all .3s linear;
+
+}
+
+#sun{
+
+    position: absolute;
+    transform: scale(0);
+    left: 0;
+    z-index: 5;
+    transition:  1.5s ease-out ;
+    transform-origin: bottom;
+    
+}
+.sun-img{
+    padding-top: .4rem;
+    padding-left: .2rem;
+    width: 2.2rem;
+}
+
+#moon{
+    position: absolute;
+    right: 0;
+    z-index: 5;
+    transition:  1.5s ease-out ;
+    transform-origin: top;
+
+    
+
+}
+.moon-img{
+    padding-top: .2rem;
+    width: 2.6rem;
+    
 }
 
 
@@ -48,7 +81,7 @@
 
 @media only screen and (max-width: 600px){
     .switch-wrapper{
-        right: 6%;
+        right: 3%;
         top: 2%;
     }
     .slider{
@@ -59,7 +92,11 @@
         width: 2rem;
         height: 2rem;
     }
-
-
+    .moon-img{
+        padding-top: .4rem;
+     width: 1.3rem;   
     }
-    
+    .sun-img{
+        width: 1.5rem;
+    }
+}  

@@ -7,6 +7,8 @@ const form = document.getElementById('form');
 const text = document.getElementById('text');
 const amount = document.getElementById('amount');
 const delete_btn = document.querySelector(".delete-btn");
+const moon = document.getElementById('moon');
+const sun = document.getElementById('sun');
 
 var today = new Date();
 var dd = today.getDate()
@@ -168,16 +170,20 @@ const enableDarkMode =()=>{
     document.body.classList.add("darkmode");
     knob.style.left="100%"
     knob.style.transform="translateX(-100%)"
-    slider[0].style.backgroundImage="linear-gradient(30deg,#4C00FF,#9F77FF)"; 
-
+    slider[0].style.backgroundImage="linear-gradient(30deg,#B485E6, #E5E2EB)"; 
+    moon.style.transform="scale(0)"
+    sun.style.transform="scale(1)"
     localStorage.setItem('darkMode','enabled');
+
 }
 const disableDarkMode =()=>{
 
     document.body.classList.remove("darkmode");
     knob.style.left="0%"
     knob.style.transform="translateX(0%)"
-    slider[0].style.backgroundImage="linear-gradient(30deg,#817fff, #ff9100)";
+    slider[0].style.backgroundImage="linear-gradient(30deg,#FAA17A,#FFC170)";
+    moon.style.transform="scale(1)"
+    sun.style.transform="scale(0)"
     localStorage.setItem('darkMode','null');
 }
 
