@@ -2,7 +2,7 @@ const balance = document.getElementById('balance');
 const money_plus = document.getElementById('money-plus');
 const money_minus = document.getElementById('money-minus');
 const list = document.getElementById('list');
-const list_item = document.querySelectorAll('#list li')
+const list_item = document.getElementsByClassName('list-item');
 const form = document.getElementById('form');
 const text = document.getElementById('text');
 const amount = document.getElementById('amount');
@@ -66,6 +66,7 @@ function addTransactionDOM(transaction){
     //get sign 
     const sign = transaction.amount<0?'-':'+';
     const item = document.createElement('li');
+    item.classList.add("list-item")
 
     // Add class based on value
     const spanClass = (transaction.amount<0?'amountMinus':'amountPlus');
@@ -194,13 +195,17 @@ darkModeToggle.addEventListener("click",()=>{
     }
 });
 
+const list_length = list_item.length;
 
-list_item.addEventListener("touchstart", function() {
+for (let i=0; i<list_length; i++){
+
+list_item[i].addEventListener("click", function() {
+    alert("sj")
 delete_btn.style.opacity="1"
 delete_btn.style.left="0%"
 
 }, true);
 
-
+}
 
 
